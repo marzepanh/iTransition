@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135670eb-5825-4889-b302-412f410b571a" name="Default Changelist" comment="" />
+    <list default="true" id="135670eb-5825-4889-b302-412f410b571a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/signup.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,12 +104,24 @@
       <workItem from="1644713166623" duration="13723000" />
       <workItem from="1644790826268" duration="11175000" />
       <workItem from="1644866350667" duration="3730000" />
-      <workItem from="1644870148073" duration="6612000" />
+      <workItem from="1644870148073" duration="8532000" />
     </task>
+    <task id="LOCAL-00001" summary="Upload project">
+      <created>1644877137707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644877137707</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Upload project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="19" key="#CLI_Interpreters" timestamp="1644713726117">
@@ -137,11 +153,19 @@
       <screen x="1366" y="7" width="1360" height="728" />
     </state>
     <state x="1776" y="118" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644594474012" />
+    <state x="1615" y="7" key="CommitChangelistDialog2" timestamp="1644877136198">
+      <screen x="1366" y="7" width="1360" height="728" />
+    </state>
+    <state x="1615" y="7" key="CommitChangelistDialog2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644877136198" />
     <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1644713610036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1826" y="126" key="FileChooserDialogImpl/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644607047575" />
     <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1644713610036" />
+    <state x="1924" y="269" key="Github.ShareDialog" timestamp="1644877401509">
+      <screen x="1366" y="7" width="1360" height="728" />
+    </state>
+    <state x="1924" y="269" key="Github.ShareDialog/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644877401509" />
     <state width="197" height="457" key="HiddenNamespacesPopup" timestamp="1644713175379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -156,6 +180,10 @@
     </state>
     <state x="1547" y="16" key="SettingsEditor/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644675093691" />
     <state x="182" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1644713731942" />
+    <state x="1638" y="104" key="Vcs.Push.Dialog.v2" timestamp="1644877170264">
+      <screen x="1366" y="7" width="1360" height="728" />
+    </state>
+    <state x="1638" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644877170264" />
     <state x="72" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1644713722852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

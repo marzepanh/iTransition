@@ -2,7 +2,7 @@
     session_start();
     require_once 'connect.php';
     $login = $_POST['email'];
-    $password = md5($_POST['password']."ghght24");
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $name = $_POST['name'];
     $registration_date = date('d.m.Y H:i');
 
