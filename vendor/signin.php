@@ -16,7 +16,7 @@
             setcookie('user', $user['login'], time() + 3600, "/");
             $last_login = date('d.m.Y H:i');
             mysqli_query($connect, "UPDATE `users` SET `last_login` = '$last_login' WHERE `login` = '$login'");
-            header('Location: ../public/index.php');
+            header('Location: ../index.php');
         } else {
             $_SESSION['message'] = 'Wrong login or password';
             header('Location: ../public/signin.php');

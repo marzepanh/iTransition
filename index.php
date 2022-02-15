@@ -1,14 +1,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <?php
-    require_once '../vendor/connect.php';
-    require_once '../vendor/isbanned.php';
+    require_once 'vendor/connect.php';
+    require_once 'vendor/isbanned.php';
 
     $result = mysqli_query($connect, "SELECT * FROM `users`");
 
     if (isBanned($connect)) {
         $_SESSION['message'] = 'You was banned';
         setcookie('user', $_COOKIE['user'], time() - 3600, "/");
-        header('Location: ../public/signin.php');
+        header('Location: public/signin.php');
     }
 ?>
 
@@ -31,19 +31,19 @@
 
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <a href="/public/index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="/index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                 <img class="bi me-2"
-                     src="../images/auth.svg" alt="" width="60" height="50">
+                     src="images/auth.svg" alt="" width="60" height="50">
             </a>
             <?php
             if($_COOKIE['user'] == '' || $banned):
             ?>
             <div class="col-md-3 text-end">
-                <a class="btn btn-primary" href="signin.php" role="button">Login</a>
-                <a class="btn btn-primary" href="signup.php" role="button">Sign-up</a>
+                <a class="btn btn-primary" href="public/signin.php" role="button">Login</a>
+                <a class="btn btn-primary" href="public/signup.php" role="button">Sign-up</a>
             </div>
             <?php else: ?>
-                <p>Hello, <?= $_COOKIE['user']?> <a href="../vendor/exit.php">exit</a></p>
+                <p>Hello, <?= $_COOKIE['user']?> <a href="vendor/exit.php">exit</a></p>
             <?php endif; ?>
         </header>
     </div>
@@ -52,7 +52,7 @@
     <?php
     if($_COOKIE['user'] != ''):
     ?>
-        <form method="post" id="form" action="../vendor/userAction.php">
+        <form method="post" id="form" action="vendor/userAction.php">
 <div class="container-lg">
 <table class="table">
     <thead>
@@ -121,7 +121,7 @@
     <div class="container-lg">
         <div>
             <p>You need to be logged in to see the user table.
-                Please <a href="signin.php">login</a> / <a href="signup.php">sign up</a>.</p>
+                Please <a href="public/signin.php">login</a> / <a href="public/signup.php">sign up</a>.</p>
         </div>
     </div>
     <?php endif; ?>
