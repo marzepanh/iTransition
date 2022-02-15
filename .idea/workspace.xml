@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="135670eb-5825-4889-b302-412f410b571a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-getting-started" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/exit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/exit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/userAction.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,7 @@
       <workItem from="1644946683650" duration="733000" />
       <workItem from="1644947684315" duration="268000" />
       <workItem from="1644947975439" duration="3057000" />
-      <workItem from="1644951384339" duration="1279000" />
+      <workItem from="1644951384339" duration="5212000" />
     </task>
     <task id="LOCAL-00001" summary="Upload project">
       <created>1644877137707</created>
