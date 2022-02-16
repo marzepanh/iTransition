@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="135670eb-5825-4889-b302-412f410b571a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/isbanned.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/isbanned.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +118,9 @@
       <workItem from="1644946683650" duration="733000" />
       <workItem from="1644947684315" duration="268000" />
       <workItem from="1644947975439" duration="3057000" />
-      <workItem from="1644951384339" duration="5212000" />
+      <workItem from="1644951384339" duration="7586000" />
+      <workItem from="1644965134291" duration="345000" />
+      <workItem from="1645015532570" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="Upload project">
       <created>1644877137707</created>
@@ -130,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644879801769</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Deploy app">
+      <created>1644959885291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644959885291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Upload project" />
     <MESSAGE value="Add secure password hashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add secure password hashing" />
+    <MESSAGE value="Deploy app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="19" key="#CLI_Interpreters" timestamp="1644713726117">
@@ -171,10 +185,10 @@
       <screen x="1366" y="7" width="1360" height="728" />
     </state>
     <state x="1776" y="118" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644594474012" />
-    <state x="1615" y="7" key="CommitChangelistDialog2" timestamp="1644879800979">
+    <state x="1615" y="7" key="CommitChangelistDialog2" timestamp="1644959884449">
       <screen x="1366" y="7" width="1360" height="728" />
     </state>
-    <state x="1615" y="7" key="CommitChangelistDialog2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644879800979" />
+    <state x="1615" y="7" key="CommitChangelistDialog2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644959884449" />
     <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1644713610036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -198,10 +212,10 @@
     </state>
     <state x="1547" y="16" key="SettingsEditor/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644675093691" />
     <state x="182" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1644713731942" />
-    <state x="1638" y="104" key="Vcs.Push.Dialog.v2" timestamp="1644877170264">
+    <state x="1638" y="104" key="Vcs.Push.Dialog.v2" timestamp="1644959945390">
       <screen x="1366" y="7" width="1360" height="728" />
     </state>
-    <state x="1638" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644877170264" />
+    <state x="1638" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.7.1360.728@1366.7.1360.728" timestamp="1644959945390" />
     <state x="72" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1644713722852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,15 +1,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <?php
-    require_once 'vendor/connect.php';
-    require_once 'vendor/isbanned.php';
+require_once 'vendor/connect.php';
+require_once 'vendor/isbanned.php';
 
-    $result = mysqli_query($connect, "SELECT * FROM `users`");
+$result = mysqli_query($connect, "SELECT * FROM `users`");
 
-    if (isBanned($connect)) {
-        $_SESSION['message'] = 'You was banned';
-        setcookie('user', $_COOKIE['user'], time() - 3600, "/");
-        header('Location: public/signin.php');
-    }
+if (isBanned($connect)) {
+    $_SESSION['message'] = 'You was banned';
+    setcookie('user', $_COOKIE['user'], time() - 3600, "/");
+    header('Location: public/signin.php');
+}
 ?>
 
 <script>
@@ -36,12 +36,12 @@
                      src="images/auth.svg" alt="" width="60" height="50">
             </a>
             <?php
-            if($_COOKIE['user'] == '' || $banned):
-            ?>
-            <div class="col-md-3 text-end">
-                <a class="btn btn-primary" href="public/signin.php" role="button">Login</a>
-                <a class="btn btn-primary" href="public/signup.php" role="button">Sign-up</a>
-            </div>
+            if(!isset($_COOKIE['user'])):
+                ?>
+                <div class="col-md-3 text-end">
+                    <a class="btn btn-primary" href="public/signin.php" role="button">Login</a>
+                    <a class="btn btn-primary" href="public/signup.php" role="button">Sign-up</a>
+                </div>
             <?php else: ?>
                 <p>Hello, <?= $_COOKIE['user']?> <a href="vendor/exit.php">exit</a></p>
             <?php endif; ?>
@@ -49,82 +49,82 @@
     </div>
 </head>
 <body>
-    <?php
-    if($_COOKIE['user'] != ''):
+<?php
+if(isset($_COOKIE['user'])):
     ?>
-        <form method="post" id="form" action="vendor/userAction.php">
-<div class="container-lg">
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox"
-                       id="select-all" value="option" aria-label="..."> Select All
-            </div>
-        </th>
-        <th scope="col">id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Registration date</th>
-        <th scope="col">Last login</th>
-        <th scope="col">Status</th>
-    </tr>
-    </thead>
+    <form method="post" id="form" action="vendor/userAction.php">
+        <div class="container-lg">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="form-check">
+                            <input class="form-check-input position-static" type="checkbox"
+                                   id="select-all" value="option" aria-label="..."> Select All
+                        </div>
+                    </th>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Registration date</th>
+                    <th scope="col">Last login</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
 
-    <tbody>
-    <?php
-    while ($user = mysqli_fetch_assoc($result)) {
-        if($user['status']) {
-            $status = "Banned";
-        } else {
-            $status = "-";
-        }
-        ?>
-        <tr>
-        <th>
-                <div class="form-group">
-                    <input class="form-check-input position-static" type="checkbox"
-                           id="blankCheckbox" value="<?=$user['id']?>" name="id[]">
+                <tbody>
+                <?php
+                while ($user = mysqli_fetch_assoc($result)) {
+                    if($user['status']) {
+                        $status = "Banned";
+                    } else {
+                        $status = "-";
+                    }
+                    ?>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <input class="form-check-input position-static" type="checkbox"
+                                       id="blankCheckbox" value="<?=$user['id']?>" name="id[]">
+                            </div>
+                        </th>
+                        <td><?=$user['id']?></td>
+                        <td><?=$user['name']?></td>
+                        <td><?=$user['login']?></td>
+                        <td><?=$user['registration_date']?></td>
+                        <td><?=$user['last_login']?></td>
+                        <td><?=$status?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+                </tbody>
+                <div class="container-lg">
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="submit" class="btn btn-primary"
+                                name="act" value="block">Block</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="submit" class="btn btn-primary"
+                                name="act" value="unblock">Unblock</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="submit" class="btn btn-primary"
+                                name="act" value="delete">Delete</button>
+                    </div>
                 </div>
-        </th>
-            <td><?=$user['id']?></td>
-            <td><?=$user['name']?></td>
-            <td><?=$user['login']?></td>
-            <td><?=$user['registration_date']?></td>
-            <td><?=$user['last_login']?></td>
-            <td><?=$status?></td>
-        </tr>
-    <?php
-    }
-    ?>
-    </tbody>
-    <div class="container-lg">
-        <div class="btn-group" role="group" aria-label="Third group">
-            <button type="submit" class="btn btn-primary"
-            name="act" value="block">Block</button>
-        </div>
-        <div class="btn-group" role="group" aria-label="Third group">
-            <button type="submit" class="btn btn-primary"
-                    name="act" value="unblock">Unblock</button>
-        </div>
-        <div class="btn-group" role="group" aria-label="Third group">
-            <button type="submit" class="btn btn-primary"
-                    name="act" value="delete">Delete</button>
-        </div>
-    </div>
     </form>
 
-</table>
-</div>
-    <?php else: ?>
+    </table>
+    </div>
+<?php else: ?>
     <div class="container-lg">
         <div>
             <p>You need to be logged in to see the user table.
                 Please <a href="public/signin.php">login</a> / <a href="public/signup.php">sign up</a>.</p>
         </div>
     </div>
-    <?php endif; ?>
+<?php endif; ?>
 </body>
 </html>
 

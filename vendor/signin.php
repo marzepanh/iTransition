@@ -7,12 +7,11 @@
 
     $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login'");
     $user = $check_user->fetch_assoc();
-
     if ($user['status']) {
         $_SESSION['message'] = 'This account was banned';
         header('Location: ../public/signin.php');
     } else {
-        if (count($user) > 0 && password_verify($password, $user['password'])) {
+        if (!is_null($user) && password_verify($password, $user['password'])) {
             setcookie('user', $user['login'], time() + 3600, "/");
             $last_login = date('d.m.Y H:i');
             mysqli_query($connect, "UPDATE `users` SET `last_login` = '$last_login' WHERE `login` = '$login'");
